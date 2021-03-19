@@ -9,6 +9,7 @@ ${CODEQL_PATH} database analyze ${db} \
   codeql-javascript-atm/UntrustedDataToExternalAPIATM.ql \
   --threads 2 --ram 6144 --keep-full-cache --min-disk-free 1024 \
   --format sarif-latest \
+  --sarif-add-file-contents \
   --output external-api-atm.sarif \
   --external offlineSinkEmbeddingsNosqlInjection=${offline_embeddings_prefix}NosqlInjectionRelease.csv \
   --external offlineSinkEmbeddingsSqlInjection=${offline_embeddings_prefix}SqlInjectionRelease.csv \
