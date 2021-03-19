@@ -1,0 +1,9 @@
+name: 'CodeQL: JS/TS untrusted data report.'
+description: 'Run the ranked "untrusted dataflow to external API" query for JavaScript/TypeScript'
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/init-atm.sh
+      shell: bash
+    - run: ${{ github.action_path }}/run-atm.sh
+      shell: bash
